@@ -1,4 +1,5 @@
 Flask
+Flask-Cors==4.0.0
 Google-cloud-datastore==2.7.1
 requests==2.27.1
 gunicorn==20.0.4
