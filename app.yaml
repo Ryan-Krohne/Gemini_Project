@@ -1,0 +1,12 @@
+
+runtime: python39  # Adjust if needed based on your Flask version
+
+handlers:
+  # Serve static files from client-side/dist directory
+- url: /static/*
+  static_files: client-side/dist/*
+  upload: client-side/dist/*
+
+  # Flask application entry point
+- url: /.*
+  script: gunicorn -b :$PORT main:app
