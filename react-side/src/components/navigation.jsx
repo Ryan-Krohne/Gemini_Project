@@ -9,6 +9,11 @@ const Navigation = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
 
+  const handleNavLinkClick = () => {
+    // Close the menu on mobile after clicking a link
+    setMenuOpen(false);
+  };
+
   return (
     <Navbar className="navigation" fixed="top" expand="sm">
       <>
@@ -19,7 +24,7 @@ const Navigation = () => {
             </a>
           </div>
           <div>
-            <a href="#home" className={`company-name ${isMenuOpen ? 'active' : ''}`}>PixelInfo.Inc</a>
+            <a href="/" className={`company-name ${isMenuOpen ? 'active' : ''}`}>PixelInfo.Inc</a>
           </div>
         </div>
         <Nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
@@ -27,7 +32,7 @@ const Navigation = () => {
                 <Link to="/" className="nav-link">Home</Link>
             </NavItem>
             <NavItem>
-                <Link to="/geminipage" className="nav-link">Form Generator</Link>
+                <Link to="/geminipage" className="nav-link">Generator</Link>
             </NavItem>
             <NavItem>
                 <Link to="/contact" className="nav-link">Contact</Link>

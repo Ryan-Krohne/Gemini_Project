@@ -4,18 +4,19 @@
     min-height: 80px;
     display: flex;
     justify-content: space-between !important;
-    background-color: #0b0b0b;
     align-items: center;
     opacity: 93%;
     padding: 0 20px !important;
     position: fixed !important;
     z-index: 9999 !important;
-    box-shadow: 0 2px 4px #c6c6c620 !important;
+    background-color: rgba(255, 255, 255, 0.264);
+    backdrop-filter: blur(10px);
 
     .nav {
       display: flex;
       align-items: center;
       gap: 25px;
+      color: black;
     }
   
     .branding {
@@ -24,11 +25,12 @@
       display: flex;
       flex-direction: row;
     }
-  
+
     .company-name {
-      font-size: 1.5rem;
+      font-size: 1.25em;
       padding-left: 0.5em;
       transition: 0.7s;
+      color: black;
   
       &:hover {
         font-size: 1.6em;
@@ -37,22 +39,22 @@
     }
   
     .gavipic {
-      width: 50px;
-      height: 50px;
+      width: 100%;
+      height: auto;
       border-radius: 50%;
     }
   
     .nav-link {
       transition: 0.5s ease;
-      color: rgb(255, 255, 255) !important;
+      color: black !important;
       cursor: pointer;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
   
       &:hover {
         font-size: 1.4em;
         cursor: pointer;
         color: #a6baf5 !important;
-        border-bottom: 1px dashed #a6baf5 !important;
+        border-bottom: 1px dashed #000000 !important;
       }
     }
   
@@ -66,7 +68,7 @@
         height: 6px;
         margin: 6px auto;
         transition: all 0.4s ease-in-out;
-        background-color: white;
+        background-color: black;
       }
     }
   
@@ -86,30 +88,32 @@
           transform: translateY(-15px) rotate(-45deg);
         }
       }
-  
-      .navitem {
+
+      .nav {
         position: fixed;
         right: 0%;
         top:75px;
-        opacity: 0%;
         visibility: hidden;
         gap:0;
-        border: 1px solid rgb(75, 75, 75);
         flex-direction: column !important;
-        background-color: black;
         width: 100%;
-        height: max-content;
+        height: 100vh;
         text-align: center;
         transition: 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  
+        background-color: rgba(0, 0, 0, 0.092);
+        background-blend-mode:color-dodge;
+    
+
         .nav-link {
           display: flex;
-          border-bottom: 1px solid rgb(75, 75, 75);
-          width: 100%;
-          height: 3em;
-          padding-top: 3%;
+          border-bottom: 1px solid rgb(0, 0, 0);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.238);
+          width: 100vw;
+          height: fit-content;
           justify-content: center;
+          padding: 5%;
           margin-left: 2vw;
+          font-size: 6vw;
         }
   
         &.active {
@@ -124,7 +128,7 @@
   .landing-page {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 150vh;
     margin: 0;
     padding: 20px;
     font-family: sans-serif;
