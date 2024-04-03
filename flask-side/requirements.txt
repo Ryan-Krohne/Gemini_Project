@@ -2,3 +2,4 @@ Flask
 Werkzeug
 undetected_chromedriver
 pyautogui
+Flask-Cors
