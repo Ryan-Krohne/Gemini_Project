@@ -12,9 +12,6 @@ const LandingPage = () => {
         </p>
         <button className="call-to-action">Learn More</button>
       </main>
-      <footer className="footer">
-        <p>&copy; 2024 Company Name</p>
-      </footer>
     </div>
   );
 };

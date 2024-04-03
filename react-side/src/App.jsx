@@ -4,6 +4,7 @@ import Navigation from './components/navigation';
 import LandingPage from './landingpage'; 
 import GeminiPage from './geminipage';
 import ContactPage from './contact'; 
+import Footer from './components/footer';
 import './App.css';
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/geminipage" element={<GeminiPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
+        <Footer/>
       </div>
     </Router>
   );

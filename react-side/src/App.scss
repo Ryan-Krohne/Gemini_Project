@@ -5,18 +5,17 @@
     display: flex;
     justify-content: space-between !important;
     align-items: center;
-    opacity: 93%;
     padding: 0 20px !important;
     position: fixed !important;
     z-index: 9999 !important;
-    background-color: rgba(255, 255, 255, 0.264);
+    background-color: #5f0822;
     backdrop-filter: blur(10px);
 
     .nav {
       display: flex;
       align-items: center;
       gap: 25px;
-      color: black;
+      color: white;
     }
   
     .branding {
@@ -30,11 +29,11 @@
       font-size: 1.25em;
       padding-left: 0.5em;
       transition: 0.7s;
-      color: black;
+      color: rgb(255, 255, 255);
   
       &:hover {
         font-size: 1.6em;
-        color: #a6baf5;
+        color: #000000;
       }
     }
   
@@ -46,15 +45,15 @@
   
     .nav-link {
       transition: 0.5s ease;
-      color: black !important;
+      color: rgb(255, 255, 255) !important;
       cursor: pointer;
       font-size: 1.3rem;
   
       &:hover {
         font-size: 1.4em;
         cursor: pointer;
-        color: #a6baf5 !important;
-        border-bottom: 1px dashed #000000 !important;
+        color: #000000 !important;
+        border-bottom: 5px dashed #000000 !important;
       }
     }
   
@@ -98,9 +97,10 @@
         flex-direction: column !important;
         width: 100%;
         height: 100vh;
+        font-weight: bolder;
         text-align: center;
         transition: 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-        background-color: rgba(0, 0, 0, 0.092);
+        background-color: rgba(197, 197, 197, 0.804);
         background-blend-mode:color-dodge;
     
 
@@ -128,7 +128,7 @@
   .landing-page {
     display: flex;
     flex-direction: column;
-    min-height: 150vh;
+    min-height: fit-content;
     margin: 0;
     padding: 20px;
     font-family: sans-serif;
@@ -170,9 +170,108 @@
   .call-to-action:hover {
     background-color: #0062cc;
   }
-  
+
+  //footer section
   .footer {
-    text-align: center;
-    margin-top: auto;
+    background-color: #5f0822;
+    color: #fff; 
+    padding: 50px 20px;
+
+  
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  
+      .footer-section {
+        flex: 1 1 calc(33.33% - 20px);
+        margin-bottom: 20px;
+  
+        &.about-section {
+          flex: 1 1 calc(60% - 20px);
+          padding-right: 20%;
+          padding-left: 5%;
+        }
+  
+        .section-heading {
+          font-size: 20px; 
+          margin-bottom: 15px;
+          font-weight: bold;
+        }
+  
+        .section-content {
+          font-size: 16px;
+          line-height: 1.6;
+        }
+  
+        .service-list,
+        .resource-list {
+          list-style: none;
+          padding: 0;
+          margin: 10px 0;
+  
+          li {
+            margin-bottom: 5px;
+          }
+        }
+  
+        .contact-info {
+          margin-top: 10px;
+        }
+  
+        .social-section {
+          margin-top: 20px;
+  
+          .social-heading {
+            font-size: 18px; 
+            margin-bottom: 10px;
+            color: #fff;
+          }
+  
+          .icons-section {
+            display: flex;
+  
+            a {
+              margin-right: 15px; 
+              color: #fff;
+  
+              &:last-child {
+                margin-right: 0;
+              }
+  
+              svg {
+                font-size: 35px; 
+                transition: color 0.3s;
+  
+                &:hover {
+                  color: #000000;
+                  border-bottom: 5px dashed #000000 !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .footer-bottom {
+      margin-top: 20px;
+      text-align: center;
+  
+      .copyright {
+        font-size: 14px;
+        color: white;
+  
+        a {
+          color: #fff;
+          text-decoration: none;
+          transition: color 0.3s;
+  
+          &:hover {
+            color: #007bff;
+          }
+        }
+      }
+    }
   }
   
